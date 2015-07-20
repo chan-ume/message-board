@@ -12,17 +12,17 @@
   </div>
 </div>
 
-<% @messages.each do |message| %>
-    名前:<%=message.name %>
-    内容:<%=message.body %>
-    <br>
-<% end %>
+<!--<% @messages.each do |message| %>-->
+<!--    名前:<%=message.name %>-->
+<!--    内容:<%=message.body %>-->
+<!--    <br>-->
+<!--<% end %>-->
     
 <%= form_for(Message.new) do |f| %>
     名前:
-    <%= f.text_area :name, :size =>"10x1" %>
+    <%= f.text_area :name, :size =>"15x1", :style => 'vertical-align: middle' %>
     
     内容:
-    <%= f.text_area :body, :size =>"10x1" %>
-    <%= f.submit nil, :class => 'btn btn-sm btn-primary', :size => '10x4' %>
+    <%= f.text_area :body, :size =>"15x1", :style => 'vertical-align: middle'  %>
+    <%= f.submit nil, :class => 'btn btn-sm btn-primary', :style => 'vertical-align: middle' %>
 <% end %>
